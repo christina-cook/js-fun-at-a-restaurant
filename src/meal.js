@@ -4,12 +4,15 @@ function nameMenuItem(food) {
 
 
 function createMenuItem(menuItem, itemCost, typeOfMeal) {
-  return {
+  var newMenuItem =
+  {
     name: menuItem,
     price: itemCost,
     type: typeOfMeal
   }
+  return newMenuItem;
 }
+
 
 function addIngredients(newIngredient, ingredients) {
   if (ingredients.includes(newIngredient) === false) {
@@ -23,18 +26,22 @@ function formatPrice(initialPrice) {
   return `$${initialPrice}`;
 }
 
+
 function decreasePrice(initialPrice) {
   var discount = initialPrice / 10;
   return initialPrice - discount;
 }
 
+
 function createRecipe(menuItem, ingredients, typeOfMeal) {
-  return {
+  var newRecipe = {
     title: menuItem,
     ingredients: ingredients,
     type: typeOfMeal
   }
+  return newRecipe;
 }
+
 
 module.exports = {
   nameMenuItem,
